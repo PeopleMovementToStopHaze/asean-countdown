@@ -1,13 +1,17 @@
 {
-  "name": "countdown-clock",
+  "name": "asean-countdown",
   "version": "1.0.0",
-  "description": "React Countdown Clock",
+  "description": "ASEAN countdown campaign until 2020",
   "keywords": [
     "react"
   ],
   "author": "Lai Chia Sheng <jason0911520@gmail.com> (http://github.com/groupystinks)",
   "license": "MIT",
-  "homepage": "https://github.com/PeopleMovementToStopHaze/countdown-clock",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeopleMovementToStopHaze/asean-countdown"
+  },
+  "homepage": "http://peoplemovementtostophaze.github.io/asean-countdown",
   "scripts": {
     "dev": "node server",
     "clean": "rimraf dist",

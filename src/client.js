@@ -17,4 +17,4 @@ const Routes = (
 );
 
 
-ReactDOM.render(Routes, document.getElementById('CountdownRoot'));
+ReactDOM.render(Routes, document.getElementById('root'));
