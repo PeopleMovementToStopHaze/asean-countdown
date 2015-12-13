@@ -8,6 +8,7 @@ class CountdownTimer extends Component {
 
   static propTypes = {
     deadline: PropTypes.string.isRequired,
+    isMobile: PropTypes.string,
     options: PropTypes.object.isRequired,
     size: PropTypes.string,
     fontSize: PropTypes.number,
@@ -178,6 +179,7 @@ class CountdownTimer extends Component {
   }
 
   render() {
+    const {isMobile} = this.props;
     const format = (this._parseFormat(this._format));
     return (
       <div className={ styles.root_container }>
@@ -204,7 +206,9 @@ class CountdownTimer extends Component {
               </canvas>
             </div> ) : null}
             {format.hour ? (
-            <div className={styles.canvas_container}>
+            <div
+              className={styles.canvas_container}
+              style={isMobile && {display: 'none'}}>
               <canvas
                 className="react-countdown-clock"
                 ref="hour_canvas"
@@ -213,7 +217,9 @@ class CountdownTimer extends Component {
               </canvas>
             </div> ) : null}
             {format.minute ? (
-            <div className={styles.canvas_container}>
+            <div
+              className={styles.canvas_container}
+              style={isMobile && {display: 'none'}} >
               <canvas
                 className="react-countdown-clock"
                 ref="minute_canvas"
@@ -222,7 +228,9 @@ class CountdownTimer extends Component {
               </canvas>
             </div> ) : null}
             {format.second ? (
-            <div className={styles.canvas_container}>
+            <div
+              className={styles.canvas_container}
+              style={isMobile && {display: 'none'}}>
               <canvas
                 className="react-countdown-clock"
                 ref="second_canvas"
@@ -231,6 +239,15 @@ class CountdownTimer extends Component {
               </canvas>
             </div> ) : null}
           </section>
+          {isMobile ? (
+          <section className={styles.digital_container}>
+            <p className={styles.digital_second}>
+              {this.state.hour}
+              :{this.state.minute}
+              :{this.state.second}
+            </p>
+          </section>)
+          : null}
       </div>
     );
   }

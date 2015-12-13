@@ -11,6 +11,11 @@ export default class App extends Component {
   }
   render() {
     const deviceDetect = new MobileDetect(window.navigator.userAgent);
+    const isMobile = deviceDetect.mobile();
+    console.log(isMobile);
+    const format = 'year-day-hour-minute-second';
+    const fontSize = isMobile ? 24 : 32;
+    const size = isMobile ? '120px' : '180px';
     return (
       <section className={styles.root}>
         <div className={styles.content_container}>
@@ -19,16 +24,15 @@ export default class App extends Component {
               <h4 className={styles.header_sm}>to Haze-Free ASEAN</h4>
             </div>
         </div>
-        {!deviceDetect.mobile() ? (
         <CountdownTimer
           deadline={'Oct 29 2020 00:00:50 UTC+0800'}
-          options={{format: 'year-day-hour-minute-second'}}
-          size="180px"
-          fontSize={32}
+          isMobile={isMobile}
+          options={{format}}
+          size={size}
+          fontSize={fontSize}
           colorFinished={Colors.white}
           colorGoing={Colors.grey800}
           textColor={Colors.grey800} />
-        ) : null}
         <div className={styles.background}></div>
       </section>
     );

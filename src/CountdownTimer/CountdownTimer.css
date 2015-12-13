@@ -15,3 +15,21 @@
   margin-top: 10px;
   margin-right: 20px;
 }
+
+.digital_container {
+  color: #424242;
+  margin: auto;
+  width: 80%;
+}
+
+.digital_second {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media screen and (max-width: 610px) {
+  .root_container {
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+  }
+}
