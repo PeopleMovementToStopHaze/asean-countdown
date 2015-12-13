@@ -9,10 +9,11 @@ body {
 }
 
 .root {
+}
+
+.background {
   background-image: url("assets/great-haze.png");
-  /*background-position: 0cm 10cm;*/
   background-repeat: no-repeat;
-  /*opacity: 0.5;*/
   left: 0;
   width: 100%;
   height: 100%;
@@ -23,12 +24,14 @@ body {
 
 .content_container {
   align-content: center;
+  align-self: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  margin: 15% auto 0 auto;
   padding: 30px;
+  vertical-align: middle;
   width: 70%;
-  margin: 30px auto;
 }
 
 .hr_container{
@@ -38,7 +41,7 @@ body {
 .header_container {
   display: flex;
   flex-direction: column;
-  margin: 250px auto 0 auto;
+  margin: auto;
   width: 100%;
 }
 
@@ -50,12 +53,6 @@ body {
   margin: 10px auto;
   text-align: center;
   text-shadow: #fff 0px 0px 40px;
-  /*text-shadow: 1px 1px #6EDD6C,
-               2px 2px #6EDD6C,
-               3px 3px #6EDD6C,
-               4px 4px #6EDD6C,
-               5px 5px #6EDD6C,
-               6px 6px #6EDD6C;*/
 }
 
 .header_sm {
@@ -66,12 +63,6 @@ body {
   margin: 10px auto;
   text-align: center;
   text-shadow: #fff 0px 0px 40px;
-  /*text-shadow: 1px 1px #6EDD6C,
-               2px 2px #6EDD6C,
-               3px 3px #6EDD6C,
-               4px 4px #6EDD6C,
-               5px 5px #6EDD6C,
-               6px 6px #6EDD6C;*/
 }
 
 .img {
