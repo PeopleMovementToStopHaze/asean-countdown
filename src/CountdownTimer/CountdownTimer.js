@@ -169,7 +169,7 @@ class CountdownTimer extends Component {
       this[propsName].font = this.props.fontSize + 'px ' + 'Roboto';
       this[propsName].fillText(this.state[format], this._radius, this._radius - 15, );
       this[propsName].font = this.props.fontSize * 3 / 4 + 'px ' + 'Roboto';
-      this[propsName].fillText(format, this._radius, this._radius + 15);
+      this[propsName].fillText(format + 's', this._radius, this._radius + 15);
       this[propsName].fillStyle = this.props.colorGoing;
       this[propsName].beginPath();
       this[propsName].arc(this._radius, this._radius, this._radius, Math.PI * 1.5, Math.PI * percent, false);
