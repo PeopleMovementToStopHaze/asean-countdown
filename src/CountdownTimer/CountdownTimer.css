@@ -8,6 +8,7 @@
   flex-direction: row;
   justify-content: center;
   margin: auto;
+  /*padding-bottom: calc(100% - 700px);*/
 }
 
 .canvas_container {

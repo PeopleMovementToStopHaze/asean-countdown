@@ -246,8 +246,7 @@ class CountdownTimer extends Component {
               :{this.state.minute}
               :{this.state.second}
             </p>
-          </section>)
-          : null}
+          </section>) : null}
       </div>
     );
   }

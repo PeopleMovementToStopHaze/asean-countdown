@@ -15,6 +15,7 @@ export default class App extends Component {
     const format = 'year-day-hour-minute-second';
     const fontSize = isMobile ? 24 : 32;
     const size = isMobile ? '120px' : '180px';
+
     return (
       <div className={styles.root}>
           <section className={styles.main_container}>

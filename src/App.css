@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+@viewport {
+  min-height: 730px;
+}
+
 .root {
   display: flex;
   flex-direction: column;
@@ -64,7 +68,10 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  margin: 15% auto 0 auto;
+  margin-top: calc(50% / 8);
+  margin-bottom: calc(50% / 14);
+  margin-left: auto;
+  margin-right: auto;
   padding: 30px;
   width: 70%;
 }
